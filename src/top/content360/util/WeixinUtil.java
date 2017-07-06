@@ -84,6 +84,8 @@ public class WeixinUtil {
 	 * @return
 	 */
 	public static Menu initMenu(){
+		Log.log("begin init Menu");
+		
 		Menu menu = new Menu();
 		
 		ClickButton button1 = new ClickButton();
@@ -117,8 +119,12 @@ public class WeixinUtil {
 	}
 	
 	public static int createMenu(String token, String menu){
+		int result = 1;
 		String url = Constants.CREATE_MENU_URL.replace("ACCESS_TOKEN", token);
-		
-		return 0;
+		JSONObject jsonObject = dopostStr(url, menu);
+		if(jsonObject != null){
+			result = jsonObject.getInt("errcode");
+		}
+		return result;
 	}
 }
