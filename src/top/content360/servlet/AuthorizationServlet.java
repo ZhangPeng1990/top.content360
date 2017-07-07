@@ -10,9 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.SwingUtilities;
 
-import top.content360.enums.EnventType;
 import top.content360.enums.MsgType;
 import top.content360.po.TextMessage;
 import top.content360.util.CheckUtil;
